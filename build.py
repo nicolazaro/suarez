@@ -60,7 +60,7 @@ page=f'''<!doctype html>
     <h1>Francisco Suárez en la Biblioteca Argentina de Rosario</h1>
     <p class="p-sub">Comentarios sobre sus ediciones monumentales renacentistas</p>
     <p class="p-fecha">Viernes 6 de noviembre, 10:00 hs.</p>
-    <p class="p-autor">Nicolás A. Lázaro<br><span>Universidad Católica de Santa Fe y Universidad Nacional de Rosario</span></p>
+    <p class="p-autor">Nicolás A. Lázaro<br><span>Universidad Católica de Santa Fe</span></p>
     <p class="p-lugar">Biblioteca Argentina Dr. Juan Álvarez<br><span>Pasaje Dr. Álvarez 1550, Rosario</span></p>
     <a class="empezar" href="#introduccion">Comenzar</a>
   </div>
