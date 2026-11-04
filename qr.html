@@ -1,0 +1,165 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tarjetas con QR de los ejemplares</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+@page { size: A4 portrait; margin: 0; }
+* { box-sizing: border-box; }
+html, body { margin: 0; background: #e9e4de; font-family: "Playfair Display", Georgia, serif; color: #241510; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.instr { max-width: 44rem; margin: 1.5rem auto; padding: 0 1rem; line-height: 1.5; }
+.instr code { font-size: .85em; }
+.hoja { width: 210mm; height: 297mm; margin: 0 auto 1rem; background: #fff; display: grid; grid-template-columns: 105mm 105mm; grid-template-rows: 148.5mm 148.5mm; break-after: page; }
+.tarjeta { padding: 0 8mm 7mm; display: flex; flex-direction: column; outline: .2mm dashed #b9b0a6; outline-offset: -.1mm; overflow: hidden; }
+.tarjeta header { background: #140b07; color: #f4ede6; margin: 0 -8mm 6mm; padding: 4mm 8mm 3.5mm; font-size: 7.5pt; line-height: 1.35; }
+.tarjeta header p { margin: 0; }
+.tarjeta header p + p { font-style: italic; color: #e3a874; }
+.cuerpo { display: flex; flex-direction: column; }
+.datos { display: flex; align-items: flex-end; gap: 4mm; }
+.t-num { font-size: 60pt; font-weight: 700; line-height: .8; margin: 0; color: #b4561c; }
+.t-ref { font-size: 9.5pt; line-height: 1.35; margin: 0; color: #5b4a40; }
+.qr { width: 60mm; height: 60mm; flex: none; margin: 6mm auto 0; }
+.qr img, .qr canvas { width: 100% !important; height: 100% !important; image-rendering: pixelated; }
+.t-tit { margin: 5mm 0 0; font-size: 10.5pt; line-height: 1.3; border-top: .3mm solid #b4561c; padding-top: 3mm; }
+.t-inv { margin: auto 0 0; font-size: 8.5pt; color: #5b4a40; }
+@media print { html, body { background: #fff; } .instr { display: none; } .hoja { margin: 0; } }
+</style></head><body>
+<div class="instr">
+<p>Cuatro tarjetas A6 por hoja A4, pensadas para papel de 125 g. Imprimí desde el sitio ya publicado: tamaño A4, escala 100 %, márgenes «Ninguno», sin encabezados ni pies del navegador y con «Gráficos de fondo» activado para que salga la franja oscura. Recortá por la línea punteada.</p>
+<p>Cada código lleva a <code id="base"></code><code>#libro-NN</code>.</p>
+</div>
+<section class="hoja"><article class="tarjeta">
+  <header><p>IV Simposio «Fuentes, Figuras y Temas del Renacimiento»</p><p>Francisco Suárez en la Biblioteca Argentina</p></header>
+  <div class="cuerpo">
+    <div class="datos"><p class="t-num">1</p><p class="t-ref">Lista n.º 11<br>BA.LA120</p></div>
+    <div class="qr" data-id="libro-01" role="img" aria-label="Código QR del ejemplar 1"></div>
+  </div>
+  <p class="t-tit"><i>Tractatus de legibus ac Deo legislatore</i><br>Amberes: Jan van Keerbergen, 1614</p>
+  <p class="t-inv">Escaneá el código para leer la ficha de este ejemplar</p>
+</article><article class="tarjeta">
+  <header><p>IV Simposio «Fuentes, Figuras y Temas del Renacimiento»</p><p>Francisco Suárez en la Biblioteca Argentina</p></header>
+  <div class="cuerpo">
+    <div class="datos"><p class="t-num">2</p><p class="t-ref">Lista n.º 12<br>BA.LA119</p></div>
+    <div class="qr" data-id="libro-02" role="img" aria-label="Código QR del ejemplar 2"></div>
+  </div>
+  <p class="t-tit"><i>Disputationum de censuris in communi</i><br>Lyon: Horace Cardon, 1604</p>
+  <p class="t-inv">Escaneá el código para leer la ficha de este ejemplar</p>
+</article><article class="tarjeta">
+  <header><p>IV Simposio «Fuentes, Figuras y Temas del Renacimiento»</p><p>Francisco Suárez en la Biblioteca Argentina</p></header>
+  <div class="cuerpo">
+    <div class="datos"><p class="t-num">3</p><p class="t-ref">Lista n.º 13<br>BA.LA118</p></div>
+    <div class="qr" data-id="libro-03" role="img" aria-label="Código QR del ejemplar 3"></div>
+  </div>
+  <p class="t-tit"><i>Operis de religione tomus quartus et ultimus</i><br>Lyon: Jacques Cardon, 1625</p>
+  <p class="t-inv">Escaneá el código para leer la ficha de este ejemplar</p>
+</article><article class="tarjeta">
+  <header><p>IV Simposio «Fuentes, Figuras y Temas del Renacimiento»</p><p>Francisco Suárez en la Biblioteca Argentina</p></header>
+  <div class="cuerpo">
+    <div class="datos"><p class="t-num">4</p><p class="t-ref">Lista n.º 14<br>BA.LA117</p></div>
+    <div class="qr" data-id="libro-04" role="img" aria-label="Código QR del ejemplar 4"></div>
+  </div>
+  <p class="t-tit"><i>Operis de divina gratia pars tertia</i><br>Lyon: Jacques Cardon, 1620</p>
+  <p class="t-inv">Escaneá el código para leer la ficha de este ejemplar</p>
+</article></section><section class="hoja"><article class="tarjeta">
+  <header><p>IV Simposio «Fuentes, Figuras y Temas del Renacimiento»</p><p>Francisco Suárez en la Biblioteca Argentina</p></header>
+  <div class="cuerpo">
+    <div class="datos"><p class="t-num">5</p><p class="t-ref">Lista n.º 15<br>BA.LA116</p></div>
+    <div class="qr" data-id="libro-05" role="img" aria-label="Código QR del ejemplar 5"></div>
+  </div>
+  <p class="t-tit"><i>Operis de religione pars secunda</i><br>Lyon: Jacques Cardon, 1624</p>
+  <p class="t-inv">Escaneá el código para leer la ficha de este ejemplar</p>
+</article><article class="tarjeta">
+  <header><p>IV Simposio «Fuentes, Figuras y Temas del Renacimiento»</p><p>Francisco Suárez en la Biblioteca Argentina</p></header>
+  <div class="cuerpo">
+    <div class="datos"><p class="t-num">6</p><p class="t-ref">Lista n.º 16<br>BA.LA115</p></div>
+    <div class="qr" data-id="libro-06" role="img" aria-label="Código QR del ejemplar 6"></div>
+  </div>
+  <p class="t-tit"><i>Operis de divina gratia tripartiti pars prima</i><br>Lyon: Jacques Cardon, 1620</p>
+  <p class="t-inv">Escaneá el código para leer la ficha de este ejemplar</p>
+</article><article class="tarjeta">
+  <header><p>IV Simposio «Fuentes, Figuras y Temas del Renacimiento»</p><p>Francisco Suárez en la Biblioteca Argentina</p></header>
+  <div class="cuerpo">
+    <div class="datos"><p class="t-num">7</p><p class="t-ref">Lista n.º 17<br>BA.LA114</p></div>
+    <div class="qr" data-id="libro-07" role="img" aria-label="Código QR del ejemplar 7"></div>
+  </div>
+  <p class="t-tit"><i>Partis secundae Summae theologiae tomus alter</i><br>Lyon: Jacques Cardon, 1621</p>
+  <p class="t-inv">Escaneá el código para leer la ficha de este ejemplar</p>
+</article><article class="tarjeta">
+  <header><p>IV Simposio «Fuentes, Figuras y Temas del Renacimiento»</p><p>Francisco Suárez en la Biblioteca Argentina</p></header>
+  <div class="cuerpo">
+    <div class="datos"><p class="t-num">8</p><p class="t-ref">Lista n.º 18<br>BA.LA113</p></div>
+    <div class="qr" data-id="libro-08" role="img" aria-label="Código QR del ejemplar 8"></div>
+  </div>
+  <p class="t-tit"><i>Pars secunda Summae theologiae de Deo rerum omnium creatore</i><br>Lyon: Jacques Cardon, 1620</p>
+  <p class="t-inv">Escaneá el código para leer la ficha de este ejemplar</p>
+</article></section><section class="hoja"><article class="tarjeta">
+  <header><p>IV Simposio «Fuentes, Figuras y Temas del Renacimiento»</p><p>Francisco Suárez en la Biblioteca Argentina</p></header>
+  <div class="cuerpo">
+    <div class="datos"><p class="t-num">9</p><p class="t-ref">Lista n.º 19<br>BA.LA112</p></div>
+    <div class="qr" data-id="libro-09" role="img" aria-label="Código QR del ejemplar 9"></div>
+  </div>
+  <p class="t-tit"><i>Prima pars Summae theologiae de Deo uno et trino</i><br>Lyon: Horace Cardon, 1617</p>
+  <p class="t-inv">Escaneá el código para leer la ficha de este ejemplar</p>
+</article><article class="tarjeta">
+  <header><p>IV Simposio «Fuentes, Figuras y Temas del Renacimiento»</p><p>Francisco Suárez en la Biblioteca Argentina</p></header>
+  <div class="cuerpo">
+    <div class="datos"><p class="t-num">10</p><p class="t-ref">Lista n.º 20<br>BA.LA111</p></div>
+    <div class="qr" data-id="libro-10" role="img" aria-label="Código QR del ejemplar 10"></div>
+  </div>
+  <p class="t-tit"><i>Varia opuscula theologica</i><br>Lyon: Jacques Cardon, 1620</p>
+  <p class="t-inv">Escaneá el código para leer la ficha de este ejemplar</p>
+</article><article class="tarjeta">
+  <header><p>IV Simposio «Fuentes, Figuras y Temas del Renacimiento»</p><p>Francisco Suárez en la Biblioteca Argentina</p></header>
+  <div class="cuerpo">
+    <div class="datos"><p class="t-num">11</p><p class="t-ref">Lista n.º 21<br>BA.LA110</p></div>
+    <div class="qr" data-id="libro-11" role="img" aria-label="Código QR del ejemplar 11"></div>
+  </div>
+  <p class="t-tit"><i>Opus de triplici virtute theologica</i><br>Lyon: Jacques Cardon, 1621</p>
+  <p class="t-inv">Escaneá el código para leer la ficha de este ejemplar</p>
+</article><article class="tarjeta">
+  <header><p>IV Simposio «Fuentes, Figuras y Temas del Renacimiento»</p><p>Francisco Suárez en la Biblioteca Argentina</p></header>
+  <div class="cuerpo">
+    <div class="datos"><p class="t-num">12</p><p class="t-ref">Lista n.º 22<br>BA.LA109</p></div>
+    <div class="qr" data-id="libro-12" role="img" aria-label="Código QR del ejemplar 12"></div>
+  </div>
+  <p class="t-tit"><i>Operis de virtute et statu religionis tomus secundus</i><br>Lyon: Horace Cardon, 1610</p>
+  <p class="t-inv">Escaneá el código para leer la ficha de este ejemplar</p>
+</article></section><section class="hoja"><article class="tarjeta">
+  <header><p>IV Simposio «Fuentes, Figuras y Temas del Renacimiento»</p><p>Francisco Suárez en la Biblioteca Argentina</p></header>
+  <div class="cuerpo">
+    <div class="datos"><p class="t-num">13</p><p class="t-ref">Lista n.º 23<br>BA.LA108</p></div>
+    <div class="qr" data-id="libro-13" role="img" aria-label="Código QR del ejemplar 13"></div>
+  </div>
+  <p class="t-tit"><i>Opus de virtute et statu religionis</i><br>Lyon: Horace Cardon, 1609</p>
+  <p class="t-inv">Escaneá el código para leer la ficha de este ejemplar</p>
+</article><article class="tarjeta">
+  <header><p>IV Simposio «Fuentes, Figuras y Temas del Renacimiento»</p><p>Francisco Suárez en la Biblioteca Argentina</p></header>
+  <div class="cuerpo">
+    <div class="datos"><p class="t-num">14</p><p class="t-ref">Lista n.º 24<br>BA.LA107</p></div>
+    <div class="qr" data-id="libro-14" role="img" aria-label="Código QR del ejemplar 14"></div>
+  </div>
+  <p class="t-tit"><i>Commentariorum ac disputationum in tertiam partem divi Thomae</i><br>Lyon: Horace Cardon, 1603</p>
+  <p class="t-inv">Escaneá el código para leer la ficha de este ejemplar</p>
+</article><article class="tarjeta">
+  <header><p>IV Simposio «Fuentes, Figuras y Temas del Renacimiento»</p><p>Francisco Suárez en la Biblioteca Argentina</p></header>
+  <div class="cuerpo">
+    <div class="datos"><p class="t-num">15</p><p class="t-ref">Lista n.º 25<br>BA.LA106</p></div>
+    <div class="qr" data-id="libro-15" role="img" aria-label="Código QR del ejemplar 15"></div>
+  </div>
+  <p class="t-tit"><i>Commentariorum ac disputationum in tertiam partem divi Thomae</i><br>Venecia, 1599</p>
+  <p class="t-inv">Escaneá el código para leer la ficha de este ejemplar</p>
+</article><article class="tarjeta">
+  <header><p>IV Simposio «Fuentes, Figuras y Temas del Renacimiento»</p><p>Francisco Suárez en la Biblioteca Argentina</p></header>
+  <div class="cuerpo">
+    <div class="datos"><p class="t-num">16</p><p class="t-ref">Lista n.º 26<br>BA.LA105</p></div>
+    <div class="qr" data-id="libro-16" role="img" aria-label="Código QR del ejemplar 16"></div>
+  </div>
+  <p class="t-tit"><i>Commentariorum ac disputationum in tertiam partem divi Thomae</i><br>Lyon: Jean-Baptiste Buysson, 1592</p>
+  <p class="t-inv">Escaneá el código para leer la ficha de este ejemplar</p>
+</article></section>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script>
+var base = location.href.split("#")[0].replace(/qr\.html.*$/, "");
+document.getElementById("base").textContent = base;
+document.querySelectorAll(".qr").forEach(function(el){
+  new QRCode(el, { text: base + "#" + el.dataset.id, width: 512, height: 512, colorDark: "#140b07", colorLight: "#ffffff", correctLevel: QRCode.CorrectLevel.Q });
+});
+</script></body></html>

@@ -1,0 +1,84 @@
+/* Identidad del IV Simposio: fondo oscuro de óleo veneciano, luz cálida, Playfair Display */
+:root{
+  --fondo:#140b07; --brasa:#3b1a0c; --tinta:#f4ede6; --ambar:#e3955a; --gris:#b8a799; --filete:rgba(244,237,230,.16);
+  color-scheme:dark; box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+  --base:1.125rem;
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth; scroll-padding-top:env(safe-area-inset-top,0px); background:var(--fondo)}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0; background:var(--fondo); color:var(--tinta);
+  font-family:"Playfair Display", Georgia, "Times New Roman", serif;
+  font-size:var(--base); line-height:1.62; -webkit-text-size-adjust:100%}
+html.proyeccion{--base:1.45rem}
+a{color:var(--ambar); text-underline-offset:.18em; text-decoration-thickness:1px}
+a:focus-visible, summary:focus-visible{outline:2px solid var(--ambar); outline-offset:3px}
+.saltar{position:absolute; left:-999px} .saltar:focus{left:1rem; top:1rem; background:var(--fondo); padding:.5rem}
+
+.slide{min-height:100svh; padding:4.5rem 1.4rem 4rem; border-bottom:1px solid var(--filete); display:flex; align-items:center}
+.col{width:100%; max-width:36rem; margin:0 auto}
+.col.ancha{max-width:44rem}
+h2{font-weight:500; font-size:1.95em; line-height:1.15; margin:0 0 .8em}
+p{margin:0 0 1em; hyphens:auto}
+.nota{color:var(--gris); font-size:.92em}
+
+/* Portada: la luz del flyer, de un rincón hacia la sombra */
+.portada{background:radial-gradient(120% 90% at 78% 30%, #5a2711 0%, var(--brasa) 28%, var(--fondo) 70%)}
+.portada-caja{max-width:40rem; margin:0 auto; width:100%}
+.p-evento{font-size:1.05em; margin-bottom:.4em}
+.p-sup{color:var(--gris); margin-bottom:.3em}
+.portada h1{margin:0 0 .5em; font-weight:700; font-size:clamp(2.3rem,9vw,4.2rem); line-height:1.05; letter-spacing:-.01em}
+.p-sub{font-style:italic; font-size:1.15em; max-width:26em; color:var(--tinta)}
+.p-fecha{font-size:1.25em; margin-top:2em}
+.p-autor{font-weight:700; margin-top:1.6em}
+.p-autor span, .p-lugar span{font-weight:400; color:var(--gris); font-size:.88em}
+.p-lugar{margin-top:1.2em}
+.empezar{display:inline-block; margin-top:1.8rem; font-size:1.1em}
+
+/* Sedes: secuencia real */
+.sedes{list-style:none; padding:0; margin:1.4em 0; border-left:2px solid var(--ambar)}
+.sedes li{padding:.35em 0 .35em 1em}
+.sedes span{display:block; color:var(--ambar); font-size:.85em}
+
+.horacio{margin:0 0 2.2rem; padding:0}
+.horacio p{font-style:italic; font-size:1.35em; margin:0 0 .2em}
+.horacio cite{font-style:normal; color:var(--gris); font-size:.85em}
+.sentidos{margin:0}
+.sentidos dt{font-weight:700; margin-top:1.1em}
+.sentidos dd{margin:.15em 0 0}
+
+/* Índice */
+.indice{list-style:none; padding:0; margin:1.2em 0 0; border-top:1px solid var(--filete)}
+.indice a{display:grid; grid-template-columns:2.6rem 1fr auto; gap:.6rem; align-items:baseline; padding:.65em .2em; border-bottom:1px solid var(--filete); color:var(--tinta); text-decoration:none}
+.indice a:hover .i-tit, .indice a:focus-visible .i-tit{text-decoration:underline; text-decoration-color:var(--ambar)}
+.i-num{color:var(--ambar); font-size:1.4em; line-height:1; font-weight:700}
+.i-anio{color:var(--gris); font-size:.9em}
+
+/* Ficha: el número del ejemplar, como el de la tarjeta junto al libro */
+.ficha-cab{display:flex; align-items:flex-end; gap:1rem; border-bottom:1px solid var(--filete); padding-bottom:.8rem; margin-bottom:1.4rem}
+.orden{font-size:clamp(4.5rem,22vw,7.5rem); line-height:.82; color:var(--ambar); font-weight:700}
+.refs{margin:0 0 .1em; font-size:.88em; color:var(--gris); line-height:1.4}
+.refs .sede{color:var(--tinta)}
+.titulo-libro{font-style:italic; font-size:1.5em; line-height:1.25; margin-bottom:.5em}
+.pie{color:var(--ambar); margin-bottom:1.3em}
+.comentario p{margin-bottom:.8em}
+.asiento{margin:1.4em 0 0; font-size:.86em; color:var(--gris)}
+.asiento summary{cursor:pointer; color:var(--tinta)}
+.asiento p{margin:.6em 0 0; font-style:italic}
+.paso{display:flex; justify-content:space-between; margin-top:2rem; padding-top:.8rem; border-top:1px solid var(--filete)}
+
+/* Proyector: número a la izquierda, ficha a la derecha */
+@media (min-width:960px) and (orientation:landscape){
+  .slide{padding:5rem 2.5rem}
+  .ficha .col{max-width:72rem; display:grid; grid-template-columns:minmax(14rem,.7fr) minmax(0,1.3fr); column-gap:4rem; align-items:start}
+  .ficha .col > *{grid-column:2}
+  .ficha .ficha-cab{grid-column:1; grid-row:1 / span 6; flex-direction:column; align-items:flex-start; border-bottom:0; border-right:1px solid var(--filete); padding:0 2rem 0 0; margin:0; position:sticky; top:5rem}
+  .ficha .orden{font-size:11rem}
+  .ficha .titulo-libro{font-size:1.65em}
+}
+
+.creditos{margin-top:2.5rem; padding-top:1rem; border-top:1px solid var(--filete); font-size:.8em; color:var(--gris)}
+.ayuda{position:fixed; right:1rem; bottom:calc(.6rem + env(safe-area-inset-bottom,0px)); margin:0; font-size:.72rem; color:var(--gris); display:none; font-family:Georgia, serif}
+@media (hover:hover) and (min-width:900px){ .ayuda{display:block} }
+html.proyeccion .ayuda{display:none}
